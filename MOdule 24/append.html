@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="parent-li">
+        <li>box-1</li>
+        <li>box-2</li>
+        <li>box-3</li>
+        <li>box-4</li>
+    </ul>
+
+    <script>
+        const li= document.createElement('li');
+         li.innerText="box-5";
+
+         const a=document.getElementById('parent-li');
+         a.appendChild(li)
+    </script>
+</body>
+</html>
