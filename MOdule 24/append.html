@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <ul id="parent-li">
         <li>box-1</li>
@@ -14,12 +16,35 @@
         <li>box-4</li>
     </ul>
 
-    <script>
-        const li= document.createElement('li');
-         li.innerText="box-5";
+  <section id="maisectionn" >
+    <div>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam placeat ratione numquam, quasi distinctio
+            aperiam in maxime praesentium culpa voluptatem optio deleniti quas sit modi perferendis nesciunt! Omnis,
+            deleniti voluptatum!</p>
+    </div>
+  </section>
 
-         const a=document.getElementById('parent-li');
-         a.appendChild(li)
+    <script>
+        const li = document.createElement('li');
+        const ab = li.innerText = "box-5";
+
+        const a = document.getElementById('parent-li');
+        a.appendChild(li)
+
+        const div= document.createElement('div');
+        const h1= document.createElement('h1');
+        h1.innerText='kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk';
+        const p=document.createElement('p');
+        p.innerText="ugffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        div.appendChild(h1)
+        div.appendChild(p)
+
+        const forMainSection=document.getElementById('maisectionn');
+ 
+        forMainSection.appendChild(div)
+
     </script>
 </body>
+
 </html>
