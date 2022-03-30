@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="section-top">
+        <h1 id="buble-vai">Buble niya khela: if check then go to console</h1>
+        <ul id="list-conatiner">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li id="secound-item" class="item">Sapiente, odit in?</li>
+            <li class="item">Hic, dicta commodi?</li>
+            <li class="item">Tempore, at? Laborum.</li>
+            <li class="item">Eum, ea sapiente!</li>
+            <li class="item">Error, facere aliquam!</li>
+        </ul>
+    </section>
+
+
+
+    <script>
+        document.getElementById('secound-item').addEventListener('click', function(event){
+            console.log('click 2nd item')
+            event.stopPropagation();
+        })     
+        document.getElementById('list-conatiner').addEventListener('click', function(){
+            console.log('click  buble-vai')
+        })     
+        document.getElementById('section-top').addEventListener('click', function(){
+            console.log('click  section-top')
+        })    </script>
+</body>
+
+</html>

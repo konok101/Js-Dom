@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <div id="maindiv">
+    <p>lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab minima obcaecati eos quisquam impedit
+        excepturi voluptate, assumenda, quasi sunt numquam provident quas vero, magni ullam ducimus iusto illo libero
+        fugit.</p>
+    <p>lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, reprehenderit dignissimos quia repellat,
+        non magni quibusdam nihil tempore aliquid inventore debitis commodi consectetur sed numquam, in doloribus
+        excepturi. Minima, enim.</p>
+  </div>
+
+        <textarea name="" id="input-field" cols="60" rows="4"></textarea>
+        <button id="submit">Submit</button>
+        
+        <script>
+        /*     document.getElementById('submit').addEventListener('click', function(){
+                const inputs= document.getElementById('input-field');
+                console.log(inputs)
+                
+   
+                const p=document.createElement('p');
+                p.innerText=inputs.value;
+                const parent=document.getElementById('maindiv');
+               
+                parent.appendChild(p)
+                    }) */
+
+
+                document.getElementById('submit').addEventListener('click', function(){
+                    const inputField= document.getElementById('input-field');
+                    const p= document.createElement('p');
+                    p.innerText=inputField.value;
+
+                    const parentdiv=document.getElementById('maindiv');
+                    parentdiv.appendChild(p)
+
+             
+
+            })
+        </script>
+</body>
+
+</html>

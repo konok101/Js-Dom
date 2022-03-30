@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Event niye clickbaji</h1>
+
+    <button> <h3 onclick="makeRed()">Click me for red</h3></button>
+
+    <button id="click-for-yellow">Click for yellow</button>
+    <button id="click-for-green">Click for Green</button>
+    <button id="click-for-blue">Click for yellow</button>
+    
+    <script>
+        function makeRed(){
+            document.body.bgColor='red'
+        }
+
+        const yellowColor= document.getElementById('click-for-yellow');
+        yellowColor.onclick= makeYellow;
+
+        function makeYellow(){
+            document.body.bgColor='yellow'
+        }
+
+        // make  green
+        const greenButton=document.getElementById('click-for-green');
+        greenButton.addEventListener('click', function(){
+            document.body.bgColor=' green'
+        })
+
+        // make blue
+        document.getElementById('click-for-blue').addEventListener('click', function(){
+            document.body.bgColor='  blue'
+        })
+    </script>
+</body>
+</html>

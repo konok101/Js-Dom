@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>More  events</h1>
+    <h3 id="texts">Very import text for delete</h3>
+    <input type="text" name="" id="delete-confirm" placeholder="please write delete"> 
+    
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+        
+        document.getElementById('delete-btn').addEventListener('click', function(){
+
+            const texts= document.getElementById('texts');
+            texts.style.display="none";
+        })
+
+        // focus useeeeeeeeeeeeeeeeeeeeeeeeeee
+ 
+        document.getElementById('delete-confirm').addEventListener('focus', function(){
+       document.body.style.background= "red";
+           
+
+        }) 
+
+        // blurrrrrrrrrrrrrrrrrrr
+     document.getElementById('delete-confirm').addEventListener('blur', function(){
+            document.body.style.background= "green";
+           
+
+        }) 
+
+        // key downnnnnnnnnnnnnnnnnnnnnnnnn
+/*         document.getElementById('delete-confirm').addEventListener('keydown', function(){
+        const deleteField= document.getElementById("delete-confirm");
+        console.log(deleteField.value);
+           
+
+        }) */
+
+
+
+        // key  pressssssssssssssssssssss
+/*         document.getElementById('delete-confirm').addEventListener('keypress', function(){
+        const deleteField= document.getElementById("delete-confirm");
+        console.log(deleteField.value);
+           
+
+        }) */
+
+
+
+
+        // key  up most important==================key press korar satha sathai pai
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+         const deletes=   document.getElementById("delete-btn");
+         if(event.target.value== 'delete'){
+             deletes.removeAttribute('disabled')
+
+         }
+         else{
+             deletes.setAttribute('disabled', true)
+         }
+           
+        });
+  
+
+
+        // key  change  most important==================key  copy kore boslao satha satha sob value pai
+      /*   document.getElementById('delete-confirm').addEventListener('change', function(){
+        const deleteField= document.getElementById('delete-confirm');
+        console.log(deleteField.value);
+           
+        }); */
+    </script>
+</body>
+</html>

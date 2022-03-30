@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+            .item{
+                background-color: red;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Event delegate</h1>
+    <ul id="main-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Itaque, ab amet.</li>
+        <li class="item">Distinctio, cupiditate neque!</li>
+        <li class="item">Recusandae, nostrum magni?</li>
+        <li class="item">Architecto, est maxime.</li>
+        <li class="item">Dolore, aut ratione!</li>
+    </ul>
+    <button id="add">Add </button>
+    <script>
+        document.getElementById('add').addEventListener('click', function(){
+
+           const parentNOde= document.getElementById('main-container');
+           const li = document.createElement('li');
+          li.classList.add('item')
+           li.innerText='add inner text';
+           parentNOde.appendChild(li)
+/* const items= document.getElementsByClassName('item');
+           for(const item of items){
+               item.addEventListener('click', function(event){
+                   event.target.parentNode.removeChild(event.target)
+               }) 
+
+           } */
+
+        })
+
+        document.addEventListener('click', function(){
+           const itemsss= document.getElementsByClassName('item');
+           for(const item of itemsss){
+               item.addEventListener('click', function(event){
+                   event.target.parentNode.removeChild(event.target)
+               }) 
+
+           }
+        })
+            
+
+    </script>
+</body>
+</html>
